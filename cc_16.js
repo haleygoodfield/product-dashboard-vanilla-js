@@ -57,5 +57,8 @@ function handleError(error) { // create a function handleError(error)
     console.log(`An error occured: ${error.message}`) // Logs "An error occurred: " followed by the error message
 };
 
+// Task 6: Call Your Fetch Functions
+fetchProductsThen(); // at the bottom of cc_16.js call these
+fetchProductsAsync();
 
 
