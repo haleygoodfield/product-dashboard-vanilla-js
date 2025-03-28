@@ -1,0 +1,46 @@
+/* Do all of this later after you finish the code */
+
+body {
+    font-family: Arial, 'Times New Roman', Times, serif;
+    margin: 20px;
+    padding: 20px;
+    background-color:rgba(253, 227, 255, 0.834);
+}
+header, footer {
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid rgb(246, 184, 235);
+    background-color: rgb(255, 226, 250);
+    border-radius: 8px;
+    width: 620px;
+    display: block;
+}
+.riskCard {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid rgb(236, 148, 205);
+    background-color: rgb(244, 201, 229);
+    border-radius: 5px;
+    font-weight: bold;
+    width: 550px;
+}
+button {
+ background-color: rgb(243, 215, 233);
+ border: 2px solid rgb(236, 148, 205);
+ border-radius: 5px;
+ font-weight: bold;
+}
+button:hover {
+ background-color: rgb(236, 148, 205);
+}
+.resolve-button {
+ background-color: rgb(255, 226, 250);
+ border: 2px solid rgb(236, 148, 205);
+ border-radius: 5px;
+ font-weight: bold;
+}
+main {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}

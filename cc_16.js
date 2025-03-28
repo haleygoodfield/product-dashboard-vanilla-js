@@ -17,7 +17,7 @@ function fetchProductsThen () {  // create a function fetchProductsThen()
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error); // uses .catch() to log any errors.
     });
-}
+};
 
 // Task 3: Fetch Products with async/await
 async function fetchProductsAsync() { // create another function fetchProductsAsync() that uses async to fetch product data
@@ -28,5 +28,26 @@ async function fetchProductsAsync() { // create another function fetchProductsAs
     } catch (error) { // uses catch to fetch product data
         handleError(error); // if an error occurs, passes it to handleError(error)
     }
-}
+};
 
+// d.f.im[0].url
+// data field image
+
+
+// Task 4: Display the Products
+function displayProducts(products) { // Write a function displayProducts(products)
+    const container = document.getElementById('product-container'); // Selects #product-container
+    container.innerHTML = '';
+
+    products.slice(0, 5).forEach(product => { // loops through the first 5 products
+        const { name, price, image } = product.fields; // creates HTML elements to show each product’s name, price, and image
+
+        const div = document.createElement('div'); // creates the container for product
+        div.className = 'product';
+        div.innerHTML = `
+            <img src ="${image[0].url}" alt ="${name}">
+            <h2>${name}</h2>
+            <p>$${(price / 100).toFixed(2)}</p> `;
+        container.appendChild(div); // appends them to the container.
+    });
+};
