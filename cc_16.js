@@ -49,7 +49,7 @@ function displayProducts(products) { // Write a function displayProducts(product
         productTitle.textContent = name; // sets products name 
 
         const productPrice = document.createElement('p'); // creates p element for product price
-        productPrice.textContent = `$${(price / 100).toFixed(2)}`; // formats the price
+        productPrice.textContent = `$${(price).toFixed(2)}`; // formats the price
         
         div.appendChild(productImage); // appends image to product div
         div.appendChild(productTitle); // appends title to product div
