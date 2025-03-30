@@ -30,10 +30,6 @@ async function fetchProductsAsync() { // create another function fetchProductsAs
     }
 };
 
-// d.f.im[0].url
-// data field image
-
-
 // Task 4: Display the Products
 function displayProducts(products) { // Write a function displayProducts(products)
     const container = document.getElementById('product-container'); // Selects #product-container
@@ -42,13 +38,24 @@ function displayProducts(products) { // Write a function displayProducts(product
     products.slice(0, 5).forEach(product => { // loops through the first 5 products
         const { name, price, image } = product.fields; // creates HTML elements to show each product’s name, price, and image
 
-        const div = document.createElement('div'); // creates the container for product
-        div.className = 'product';
-        div.innerHTML = `
-            <img src ="${image[0].url}" alt ="${name}">
-            <h2>${name}</h2>
-            <p>$${(price / 100).toFixed(2)}</p> `;
-        container.appendChild(div); // appends them to the container.
+        const div = document.createElement('div'); // creates the <dic> container for product
+        div.className = 'product'; // gives product CSS
+
+        const productImage = document.createElement('img'); // creates img element for product image
+        productImage.src = image[0].url; // sets image source
+        productImage.alt = name;  // alt text for the products name
+
+        const productTitle = document.createElement('h2'); // creates h2 element for product title
+        productTitle.textContent = name; // sets products name 
+
+        const productPrice = document.createElement('p'); // creates p element for product price
+        productPrice.textContent = `$${(price / 100).toFixed(2)}`; // formats the price
+        
+        div.appendChild(productImage); // appends image to product div
+        div.appendChild(productTitle); // appends title to product div
+        div.appendChild(productPrice); // appends price to product div
+
+        container.appendChild(div); // appends <div> to the container.
     });
 };
 
